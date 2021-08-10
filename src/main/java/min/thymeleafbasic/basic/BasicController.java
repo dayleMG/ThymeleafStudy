@@ -66,27 +66,27 @@ public class BasicController {
         }
     }
 
-    @GetMapping("date")
+    @GetMapping("/date")
     private String date(Model model) {
         model.addAttribute("localDateTime", LocalDateTime.now());
         return "basic/date";
 
     }
 
-    @GetMapping("link")
+    @GetMapping("/link")
     private String link(Model model) {
         model.addAttribute("param1", "data1");
         model.addAttribute("param2", "data2");
         return "basic/link";
     }
 
-    @GetMapping("literal")
+    @GetMapping("/literal")
     public String literal(Model model) {
         model.addAttribute("data", "Spring!");
         return "basic/literal";
     }
 
-    @GetMapping("operation")
+    @GetMapping("/operation")
     public String operation(Model model) {
         model.addAttribute("nullData", null);
         model.addAttribute("data", "Spring!");
@@ -97,7 +97,7 @@ public class BasicController {
     public String atrribute() {
         return "basic/attribute";
     }
-
+    
     @Data
     static class User {
         private String username;
